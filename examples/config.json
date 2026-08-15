@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "store_dir": ".cablemend",
+  "localization": {
+    "default_slack_factor": 1.03,
+    "disagreement_tolerance_km": 2.5,
+    "otdr_uncertainty_km": 0.3,
+    "resistance_uncertainty_km": 3.0,
+    "voltage_uncertainty_km": 5.0,
+    "relative_uncertainty": 0.002,
+    "coverage_factor": 2.0,
+    "min_window_km": 0.5,
+    "max_window_km": 40.0,
+    "min_evidence_records": 2,
+    "shunt_resistance_mohm": 1.0
+  },
+  "repair": {
+    "survey_hours": 8.0,
+    "cut_and_hold_hours": 12.0,
+    "splice_hours_per_joint": 6.0,
+    "test_hours": 4.0,
+    "burial_hours_per_km": 1.5,
+    "min_work_hours": 12.0,
+    "joints_per_repair": 2,
+    "spare_slack_ratio": 0.12,
+    "excess_cable_km": 2.0,
+    "bight_factor": 2.2,
+    "depth_margin_m": 150.0,
+    "demobilization_hours": 12.0
+  },
+  "weather": {
+    "max_wave_height_m": 2.5,
+    "max_wind_kn": 30.0,
+    "min_visibility_km": 1.0,
+    "observation_hours": 1.0
+  },
+  "costs": {
+    "day_rate_weight": 1.0,
+    "transit_hour_weight": 1.0,
+    "mobilization_hour_weight": 1.25,
+    "standby_hour_weight": 0.6,
+    "spare_shortfall_per_km": 400.0,
+    "missing_capability_penalty": 5000.0,
+    "depot_transfer_per_km": 12.0
+  },
+  "verification": {
+    "loss_tolerance_db": 0.5,
+    "joint_loss_db": 0.15,
+    "max_joints_per_segment": 6,
+    "risk_depth_threshold_m": 1500.0,
+    "burial_deficit_tolerance_m": 0.2
+  },
+  "output": {
+    "float_decimals": 3
+  },
+  "priorities": {
+    "traffic_weight_per_tbps": 4.0,
+    "declared_weight": 1.0,
+    "single_route_bonus": 25.0
+  }
+}

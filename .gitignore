@@ -1,0 +1,14 @@
+# Local build, test and smoke artifacts. Go cache, temporary directories and
+# smoke-run output all live under .cache/ so the working tree stays clean.
+.cache/
+
+# Default local store directory created by the CLI.
+.cablemend/
+
+# Built binaries.
+/cablemend
+/cablemend.exe
+
+# Editor and OS noise.
+*.swp
+.DS_Store

@@ -1,0 +1,273 @@
+{
+  "version": 1,
+  "systems": [
+    {
+      "id": "SYS-COR",
+      "name": "Coral Arc Link (fictional)",
+      "slack_factor": 1.03,
+      "traffic_tbps": 24.0,
+      "single_route": false,
+      "landing_stations": [
+        {
+          "id": "LS-COR-N",
+          "name": "Auric North Terminal",
+          "kp": 0.0,
+          "jurisdiction": "AURIC"
+        },
+        {
+          "id": "LS-COR-S",
+          "name": "Borelis South Terminal",
+          "kp": 380.0,
+          "jurisdiction": "BORELIS"
+        }
+      ],
+      "segments": [
+        {
+          "id": "SEG-C1",
+          "start_kp": 0.0,
+          "end_kp": 120.0,
+          "cable_type": "double-armour",
+          "slack_factor": 1.04,
+          "existing_joints": 0,
+          "loss_db_per_km": 0.19,
+          "burial_profile": [
+            {
+              "start_kp": 0.0,
+              "end_kp": 28.0,
+              "depth_m": 60.0,
+              "burial_depth_m": 1.5,
+              "seabed": "sand"
+            },
+            {
+              "start_kp": 28.0,
+              "end_kp": 120.0,
+              "depth_m": 1800.0,
+              "burial_depth_m": 0.0,
+              "seabed": "silt"
+            }
+          ]
+        },
+        {
+          "id": "SEG-C2",
+          "start_kp": 120.0,
+          "end_kp": 260.0,
+          "cable_type": "lightweight",
+          "slack_factor": 1.03,
+          "existing_joints": 1,
+          "loss_db_per_km": 0.18,
+          "burial_profile": [
+            {
+              "start_kp": 120.0,
+              "end_kp": 260.0,
+              "depth_m": 4200.0,
+              "burial_depth_m": 0.0,
+              "seabed": "abyssal clay"
+            }
+          ]
+        },
+        {
+          "id": "SEG-C3",
+          "start_kp": 260.0,
+          "end_kp": 380.0,
+          "cable_type": "double-armour",
+          "slack_factor": 1.05,
+          "existing_joints": 2,
+          "loss_db_per_km": 0.19,
+          "burial_profile": [
+            {
+              "start_kp": 260.0,
+              "end_kp": 350.0,
+              "depth_m": 3100.0,
+              "burial_depth_m": 0.0,
+              "seabed": "silt"
+            },
+            {
+              "start_kp": 350.0,
+              "end_kp": 380.0,
+              "depth_m": 90.0,
+              "burial_depth_m": 1.2,
+              "seabed": "gravel"
+            }
+          ]
+        }
+      ],
+      "repeaters": [
+        {
+          "id": "REP-C1",
+          "kp": 62.0,
+          "kind": "repeater",
+          "gain_db": 11.5,
+          "cable_allowance_km": 0.05
+        },
+        {
+          "id": "REP-C2",
+          "kp": 155.0,
+          "kind": "repeater",
+          "gain_db": 11.5,
+          "cable_allowance_km": 0.05
+        },
+        {
+          "id": "REP-C3",
+          "kp": 240.0,
+          "kind": "equalizer",
+          "gain_db": 9.0,
+          "cable_allowance_km": 0.05
+        },
+        {
+          "id": "REP-C4",
+          "kp": 320.0,
+          "kind": "repeater",
+          "gain_db": 11.5,
+          "cable_allowance_km": 0.05
+        }
+      ],
+      "branching_units": [
+        {
+          "id": "BU-C1",
+          "kp": 300.0,
+          "branch_system_id": "SYS-KEL",
+          "cable_allowance_km": 0.08
+        }
+      ],
+      "protection_zones": [
+        {
+          "id": "PZ-CN",
+          "start_kp": 0.0,
+          "end_kp": 28.0,
+          "jurisdiction": "AURIC",
+          "permit_required": true,
+          "anchoring_restricted": true,
+          "risk_weight": 3.0
+        },
+        {
+          "id": "PZ-CM",
+          "start_kp": 100.0,
+          "end_kp": 160.0,
+          "jurisdiction": "ALTAMAR",
+          "permit_required": true,
+          "anchoring_restricted": false,
+          "risk_weight": 1.5
+        },
+        {
+          "id": "PZ-CS",
+          "start_kp": 350.0,
+          "end_kp": 380.0,
+          "jurisdiction": "BORELIS",
+          "permit_required": true,
+          "anchoring_restricted": true,
+          "risk_weight": 2.5
+        }
+      ]
+    },
+    {
+      "id": "SYS-VIN",
+      "name": "Vintra Shelf Loop (fictional)",
+      "slack_factor": 1.03,
+      "traffic_tbps": 12.0,
+      "single_route": true,
+      "landing_stations": [
+        {
+          "id": "LS-VIN-W",
+          "name": "Caldera West Terminal",
+          "kp": 0.0,
+          "jurisdiction": "CALDERA"
+        },
+        {
+          "id": "LS-VIN-E",
+          "name": "Delmare East Terminal",
+          "kp": 210.0,
+          "jurisdiction": "DELMARE"
+        }
+      ],
+      "segments": [
+        {
+          "id": "SEG-V1",
+          "start_kp": 0.0,
+          "end_kp": 90.0,
+          "cable_type": "single-armour",
+          "slack_factor": 1.05,
+          "existing_joints": 0,
+          "loss_db_per_km": 0.2,
+          "burial_profile": [
+            {
+              "start_kp": 0.0,
+              "end_kp": 20.0,
+              "depth_m": 45.0,
+              "burial_depth_m": 1.4,
+              "seabed": "sand"
+            },
+            {
+              "start_kp": 20.0,
+              "end_kp": 90.0,
+              "depth_m": 1200.0,
+              "burial_depth_m": 0.0,
+              "seabed": "silt"
+            }
+          ]
+        },
+        {
+          "id": "SEG-V2",
+          "start_kp": 90.0,
+          "end_kp": 210.0,
+          "cable_type": "lightweight",
+          "slack_factor": 1.03,
+          "existing_joints": 1,
+          "loss_db_per_km": 0.19,
+          "burial_profile": [
+            {
+              "start_kp": 90.0,
+              "end_kp": 195.0,
+              "depth_m": 2300.0,
+              "burial_depth_m": 0.0,
+              "seabed": "clay"
+            },
+            {
+              "start_kp": 195.0,
+              "end_kp": 210.0,
+              "depth_m": 70.0,
+              "burial_depth_m": 1.0,
+              "seabed": "gravel"
+            }
+          ]
+        }
+      ],
+      "repeaters": [
+        {
+          "id": "REP-V1",
+          "kp": 45.0,
+          "kind": "repeater",
+          "gain_db": 10.5,
+          "cable_allowance_km": 0.05
+        },
+        {
+          "id": "REP-V2",
+          "kp": 140.0,
+          "kind": "repeater",
+          "gain_db": 10.5,
+          "cable_allowance_km": 0.05
+        }
+      ],
+      "branching_units": [],
+      "protection_zones": [
+        {
+          "id": "PZ-VW",
+          "start_kp": 0.0,
+          "end_kp": 20.0,
+          "jurisdiction": "CALDERA",
+          "permit_required": true,
+          "anchoring_restricted": true,
+          "risk_weight": 2.0
+        },
+        {
+          "id": "PZ-VE",
+          "start_kp": 195.0,
+          "end_kp": 210.0,
+          "jurisdiction": "DELMARE",
+          "permit_required": false,
+          "anchoring_restricted": false,
+          "risk_weight": 1.0
+        }
+      ]
+    }
+  ]
+}

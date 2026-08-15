@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "faults": [
+    {
+      "id": "F-1001",
+      "system_id": "SYS-COR",
+      "reported_at": "2026-03-10T00:40:00Z",
+      "declared_priority": 80.0,
+      "traffic_tbps": 24.0,
+      "single_route": false,
+      "restore_by": "2026-03-20T00:00:00Z",
+      "description": "Abyssal shunt fault reported by both terminals of the trunk."
+    },
+    {
+      "id": "F-1002",
+      "system_id": "SYS-COR",
+      "reported_at": "2026-03-10T02:10:00Z",
+      "declared_priority": 55.0,
+      "traffic_tbps": 24.0,
+      "single_route": false,
+      "restore_by": "2026-03-28T00:00:00Z",
+      "description": "Shelf-crossing fault inside a restricted protection zone."
+    },
+    {
+      "id": "F-2001",
+      "system_id": "SYS-VIN",
+      "reported_at": "2026-03-10T01:25:00Z",
+      "declared_priority": 70.0,
+      "traffic_tbps": 12.0,
+      "single_route": true,
+      "restore_by": "2026-03-24T00:00:00Z",
+      "description": "Open fault on the single-route shelf loop."
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Keep every text file LF in the working tree so that gofmt stays clean on any
+# host, regardless of the local core.autocrlf setting.
+* text=auto eol=lf

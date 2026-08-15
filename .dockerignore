@@ -1,0 +1,14 @@
+# Build context hygiene: only go.mod, cmd/ and internal/ are needed to build.
+.cache/
+.cablemend/
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+README.md
+RELEASE_REPORT.md
+examples/
+**/*_test.go
+**/testdata/
+*.log
+*.tmp
