@@ -173,7 +173,7 @@ func (s *Store) VerifyAudit() (ChainVerification, error) {
 	}
 	for i := 0; i < len(ledger) && i < len(records); i++ {
 		if ledger[i].PayloadHash != records[i].PayloadHash {
-			out.Notes = append(out.Notes, ChainProblem{
+			out.Problems = append(out.Problems, ChainProblem{
 				Seq:    records[i].Seq,
 				Kind:   ProblemHashMismatch,
 				Detail: fmt.Sprintf("ledger payload %s does not match audit payload %s", ledger[i].PayloadHash, records[i].PayloadHash),
